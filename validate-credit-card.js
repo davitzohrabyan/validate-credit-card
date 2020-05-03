@@ -1,4 +1,4 @@
-const { creditCardTypes } = require('./credit-card-types');
+const CreditCardTypes = require('./credit-card-types');
 
 class ValidateCreditCard {
 
@@ -38,7 +38,9 @@ class ValidateCreditCard {
         const lastDigit = arr.splice(0, 1)[0];
 
         let sum = arr.reduce((acc, val, i) => {
-            return i % 2 !== 0 ? acc + val : acc + ((val * 2) % 9) || 9
+
+            return i % 2 !== 0 ? acc + val : acc + ((val * 2) % 9);
+
         }, 0);
 
         sum += lastDigit;
@@ -58,11 +60,11 @@ class ValidateCreditCard {
 
         let cardName = '';
 
-        for(let type = 0; type < creditCardTypes.length; type++) {
+        for(let type = 0; type < CreditCardTypes.length; type++) {
 
-            if(creditCardTypes[type].regex.test(accountNumberString)) {
+            if(CreditCardTypes[type].regex.test(accountNumberString)) {
 
-                cardName = creditCardTypes[type].cardName;
+                cardName = CreditCardTypes[type].cardName;
                 break;
             }
         }

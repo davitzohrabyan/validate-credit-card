@@ -11,7 +11,7 @@ $ npm install validate-credit-card
 ## API
 
 ```js
-let creditCardValidator = require('validate-credit-card')
+const creditCardValidator = require('validate-credit-card')
 
 ```
 
