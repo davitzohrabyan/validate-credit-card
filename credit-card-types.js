@@ -1,4 +1,4 @@
-creditCardTypes = [
+const creditCardTypes = [
     {
         'cardName' : 'American Express',
         'regex' : /^3[47][0-9]{13}$/,
@@ -51,6 +51,6 @@ creditCardTypes = [
         'cardName': 'Visa',
         'regex' : /^4[0-9]{15}$/,
     },
-]
+];
 
-module.exports = creditCardTypes
+module.exports = creditCardTypes;

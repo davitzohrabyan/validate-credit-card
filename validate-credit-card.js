@@ -28,14 +28,14 @@ class ValidateCreditCard {
 
     static validateCard (cardNumber) {
 
-        let accountNumberString = this._cleanNumberString(cardNumber);
+        const accountNumberString = this._cleanNumberString(cardNumber);
 
         const arr = (accountNumberString + '')
             .split('')
             .reverse()
             .map(x => parseInt(x));
 
-        let lastDigit = arr.splice(0, 1)[0];
+        const lastDigit = arr.splice(0, 1)[0];
 
         let sum = arr.reduce((acc, val, i) => {
             return i % 2 !== 0 ? acc + val : acc + ((val * 2) % 9) || 9
@@ -54,7 +54,7 @@ class ValidateCreditCard {
 
     static getCardName (cardNumber) {
 
-        let accountNumberString = this._cleanNumberString(cardNumber);
+        const accountNumberString = this._cleanNumberString(cardNumber);
 
         let cardName = '';
 
