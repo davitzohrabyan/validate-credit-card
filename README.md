@@ -1,6 +1,6 @@
 # credit-card-validator
 
-Process Visa, Visa Electron, American Express, Discover, Mastercard, Maestro, JCB and other Credit Card Numbers
+Process Visa, American Express, Discover, Mastercard, Maestro, JCB and other Credit Card Numbers
 
 ## Installation
 
@@ -26,6 +26,6 @@ Processes a string containing a credit card number and returns true if the check
 ## Example
 
 ```js
-let creditCardValidator = require('validate-credit-card');
-let isValidCard = creditCardValidator.validateCardAndSecCode('4111 1111 1111 1111', '412');
+const creditCardValidator = require('validate-credit-card');
+const isValidCard = creditCardValidator.validateCard('5500 0000 0000 0004');
 ```
