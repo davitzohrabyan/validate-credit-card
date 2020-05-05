@@ -1,0 +1,1 @@
+module.exports.ValidateCreditCard = require('./validate-credit-card')

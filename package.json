@@ -2,7 +2,7 @@
   "name": "validate-credit-card",
   "version": "1.0.1",
   "description": "Provides Credit Card Digits Validation",
-  "main": "validate-credit-card.js",
+  "main": "index.js",
   "scripts": {},
   "repository": {
     "type": "git",
