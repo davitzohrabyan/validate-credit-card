@@ -30,22 +30,20 @@ class ValidateCreditCard {
 
         const accountNumberString = this._cleanNumberString(cardNumber);
 
-        const arr = (accountNumberString + '')
+        const arr = accountNumberString.toString()
             .split('')
             .reverse()
-            .map(x => parseInt(x));
+            .map(char => parseInt(char));
 
         const lastDigit = arr.splice(0, 1)[0];
 
-        let sum = arr.reduce((acc, val, i) => {
+        let sum = arr.reduce((total, current, index) => {
 
-            return i % 2 !== 0 ? acc + val : acc + ((val * 2) % 9);
+            return index % 2 !== 0 ? total + current : total + ((current * 2) % 9);
 
         }, 0);
 
-        sum += lastDigit;
-
-        return sum % 10 === 0;
+        return (sum + lastDigit) % 10 === 0;
     }
 
     /**
@@ -60,14 +58,12 @@ class ValidateCreditCard {
 
         let cardName = '';
 
-        for(let type = 0; type < CreditCardTypes.length; type++) {
+        CreditCardTypes.forEach(type => {
+            if(type.regex.test(accountNumberString)) {
 
-            if(CreditCardTypes[type].regex.test(accountNumberString)) {
-
-                cardName = CreditCardTypes[type].cardName;
-                break;
+                return cardName = type.cardName;
             }
-        }
+        });
         return cardName;
     }
 }
