@@ -30,7 +30,10 @@ Processes a string containing a credit card number and returns true if the check
 
 ```js
 const creditCardValidator = require('validate-credit-card');
+
 const isValidCard = creditCardValidator.validateCard('5500 0000 0000 0004');
+
+const myCardName = creditCardValidator.getCardName('3400 0000 0000 009');
 ```
 
 [npm-image]: https://img.shields.io/npm/v/validate-credit-card
