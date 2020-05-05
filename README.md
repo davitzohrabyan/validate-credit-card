@@ -1,9 +1,9 @@
-# credit-card-validator
+# validate-credit-card
 
 Process Visa, American Express, Discover, Mastercard, Maestro, JCB and other Credit Card Numbers
 
 [![NPM Version][npm-image]][npm-url]
-
+[![NPM Downloads][downloads-image]][downloads-url]
 
 ## Installation
 
@@ -14,7 +14,7 @@ $ npm install validate-credit-card
 ## API
 
 ```js
-const creditCardValidator = require('validate-credit-card')
+const creditCardValidator = require('validate-credit-card');
 
 ```
 
@@ -35,3 +35,5 @@ const isValidCard = creditCardValidator.validateCard('5500 0000 0000 0004');
 
 [npm-image]: https://img.shields.io/npm/v/validate-credit-card
 [npm-url]: https://npmjs.org/package/validate-credit-card
+[downloads-url]: https://npmjs.org/package/validate-credit-card
+[downloads-image]: https://img.shields.io/npm/dw/validate-credit-card
